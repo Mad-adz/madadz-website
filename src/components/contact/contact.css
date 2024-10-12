@@ -10,7 +10,7 @@
     color: white;
   } */
 
-  input[type="text"]::placeholder ,input[type="number"]::placeholder,textarea[type="text"]::placeholder{
+  input[type="text"]::placeholder ,input[type="tel"]::placeholder,textarea[type="text"]::placeholder{
     color: #ddd;
   }
   

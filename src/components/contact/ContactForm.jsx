@@ -151,7 +151,7 @@ const ContactForm = () => {
                 </Form.Group>
 
                 <Form.Group controlId="formGroupNumber">
-                  <Form.Label style={{ color: "white", fontSize: "16px" }}>Phone Number</Form.Label>
+                  <Form.Label style={{ color: "white", fontSize: "16px" }} >Phone Number</Form.Label>
                   <Form.Control
                     className="mb-3 enquiry-input"
                     type="tel"
@@ -185,14 +185,14 @@ const ContactForm = () => {
                       color: "white",
                     }}
                   >
-                    <option value="">Select a service</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="App Development">App Development</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="SEO">SEO (Search Engine Optimization)</option>
-                    <option value="Content Creation">Content Creation</option>
-                    <option value="Designing">Designing</option>
-                    <option value="UI/UX">UI/UX</option>
+                    <option value="" style={{color:"black"}}>Select a service</option>
+                    <option value="Web Development" style={{color:"black"}}>Web Development</option>
+                    <option value="App Development" style={{color:"black"}}>App Development</option>
+                    <option value="Digital Marketing" style={{color:"black"}}>Digital Marketing</option>
+                    <option value="SEO" style={{color:"black"}}>SEO (Search Engine Optimization)</option>
+                    <option value="Content Creation" style={{color:"black"}}>Content Creation</option>
+                    <option value="Designing" style={{color:"black"}}>Designing</option>
+                    <option value="UI/UX" style={{color:"black"}}>UI/UX</option>
                   </Form.Control>
                 </Form.Group>
 
@@ -202,6 +202,7 @@ const ContactForm = () => {
                   </Form.Label>
                   <Form.Control
                     className="enquiry-input"
+                    type="text"
                     as="textarea"
                     name="message"
                     value={formValues.message}
@@ -213,7 +214,7 @@ const ContactForm = () => {
                       border: "1px solid #ccc",
                       padding: "10px",
                       background: "transparent",
-                      color: "white",
+                      color: "black",
                     }}
                   />
                 </Form.Group>
