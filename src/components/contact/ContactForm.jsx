@@ -214,7 +214,7 @@ const ContactForm = () => {
                       border: "1px solid #ccc",
                       padding: "10px",
                       background: "transparent",
-                      color: "black",
+                      color: "white",
                     }}
                   />
                 </Form.Group>
