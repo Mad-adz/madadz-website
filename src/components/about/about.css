@@ -1,0 +1,54 @@
+.banner-abt{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/img/abt-bg.jpg');
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.history-card {
+    position: relative;
+    /* background: #111; */
+    color: #fff;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+
+
+  
+  /* Card title styles */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Card description styles */
+  .card-description {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+
+  
+
+  
+  @media (max-width: 768px) {
+  
+    .history-card-title{
+        font-size: 1.5rem !important;
+    }
+  
+    .history-card-des{
+        font-size: 16px !important;
+    }
+  }
+    
+  
+
+
+  /* card design */
+
+  

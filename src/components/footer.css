@@ -1,0 +1,39 @@
+.social-icons-container a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;   /* Background size */
+    height: 24px;  /* Background size */
+    margin-right: 15px;  /* Add gap between icons */
+    background-color: #222; /* Add background color */
+    border-radius: 50%; /* Circular background */
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-icons-container a:hover {
+    background-color: #870be7; /* Change background on hover */
+  }
+  
+  .social-icons-container a .svg-inline--fa {
+    font-size: 12px;  /* Icon size */
+    color: white;
+  }
+  
+
+
+  /* footer */
+
+
+  .footer-link Link{
+    color: #d3d3d3; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for the color */
+  }
+  
+  .footer-link Link:hover {
+    color: #870be7; /* Change to your desired hover color */
+    
+  }
+
+
+  

@@ -1,0 +1,241 @@
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./gallery.css";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const imageData = [
+  [
+    {
+      src: "https://images.pexels.com/photos/10324713/pexels-photo-10324713.jpeg",
+      alt: "Image 1",
+    },
+    {
+      src: "https://images.pexels.com/photos/10533885/pexels-photo-10533885.jpeg",
+      alt: "Image 2",
+    },
+    {
+      src: "https://images.pexels.com/photos/10253213/pexels-photo-10253213.jpeg",
+      alt: "Image 3",
+    },
+  ],
+  [
+    {
+      src: "https://images.pexels.com/photos/10050979/pexels-photo-10050979.jpeg",
+      alt: "Image 4",
+    },
+    {
+      src: "https://images.pexels.com/photos/1128660/pexels-photo-1128660.jpeg",
+      alt: "Image 5",
+    },
+    {
+      src: "https://images.pexels.com/photos/9699293/pexels-photo-9699293.jpeg",
+      alt: "Image 6",
+    },
+  ],
+  [
+    {
+      src: "https://images.pexels.com/photos/6405575/pexels-photo-6405575.jpeg",
+      alt: "Image 7",
+    },
+    {
+      src: "https://images.pexels.com/photos/10162526/pexels-photo-10162526.jpeg",
+      alt: "Image 8",
+    },
+    {
+      src: "https://images.pexels.com/photos/4394807/pexels-photo-4394807.jpeg",
+      alt: "Image 9",
+    },
+  ],
+];
+
+const DesignCard = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      const additionalY = { val: 0 };
+      let additionalYAnim;
+      let offset = 0;
+      const cols = gsap.utils.toArray(".col");
+
+      cols.forEach((col, i) => {
+        const images = col.childNodes;
+
+        // DUPLICATE IMAGES FOR LOOP
+        images.forEach((image) => {
+          var clone = image.cloneNode(true);
+          col.appendChild(clone);
+        });
+
+        // SET ANIMATION
+        images.forEach((item) => {
+          let columnHeight = item.parentElement.clientHeight;
+          let direction = i % 2 !== 0 ? "+=" : "-="; // Change direction for odd columns
+
+          gsap.to(item, {
+            y: direction + Number(columnHeight / 2),
+            duration: 20,
+            repeat: -1,
+            ease: "none",
+            modifiers: {
+              y: gsap.utils.unitize((y) => {
+                if (direction === "+=") {
+                  offset += additionalY.val;
+                  y = (parseFloat(y) - offset) % (columnHeight * 0.5);
+                } else {
+                  offset += additionalY.val;
+                  y = (parseFloat(y) + offset) % -Number(columnHeight * 0.5);
+                }
+
+                return y;
+              }),
+            },
+          });
+        });
+      });
+
+      ScrollTrigger.create({
+        trigger: "section",
+        start: "top 50%",
+        end: "bottom 50%",
+        onUpdate: (self) => {
+          const velocity = self.getVelocity();
+          if (velocity > 0) {
+            if (additionalYAnim) additionalYAnim.kill();
+            additionalY.val = -velocity / 2000;
+            additionalYAnim = gsap.to(additionalY, { val: 0 });
+          }
+          if (velocity < 0) {
+            if (additionalYAnim) additionalYAnim.kill();
+            additionalY.val = -velocity / 3000;
+            additionalYAnim = gsap.to(additionalY, { val: 0 });
+          }
+        },
+      });
+    }
+  }, [isMobile]);
+
+  return (
+    <Container fluid className="my-5">
+      <section className="scroll-card-design">
+        {/* Text elements removed */}
+      </section>
+
+      <Row className="gallery">
+        {imageData.map((colData, colIndex) => (
+          <Col
+            key={colIndex}
+            className={`col d-flex flex-column design-col ${
+              isMobile ? "static" : ""
+            }`}
+          >
+            {colData.map((image, imgIndex) => (
+              <div
+                key={imgIndex}
+                className={`image-scroll ${isMobile ? "static-image" : ""}`}
+              >
+                <img src={image.src} alt={image.alt} />
+              </div>
+            ))}
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
+
+export default DesignCard;
+  <style>.scroll-card-design {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+    padding: 0; /* Remove any padding to prevent overflow */
+  }
+  
+  .gallery {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    overflow: hidden; /* Hide overflow from gallery */
+  }
+  
+  .design-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Column takes up full height */
+    overflow: hidden; /* Prevent images from overflowing */
+  }
+  
+  .image-scroll {
+    padding: 1rem;
+  }
+  
+ 
+  .static {
+    flex-direction: column; /* Stack images vertically */
+    justify-content: center;
+  }
+  
+  .static-image {
+    animation: fadeIn 0.5s ease forwards; /* Optional: Add fade-in animation for images */
+    opacity: 0;
+  }
+  
+  .static-image:nth-child(1) {
+    animation-delay: 0s; /* First image appears immediately */
+  }
+  
+  .static-image:nth-child(2) {
+    animation-delay: 0.5s; /* Second image appears after 0.5 seconds */
+  }
+  
+  .static-image:nth-child(3) {
+    animation-delay: 1s; /* Third image appears after 1 second */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Final opacity */
+    }
+  }
+  
+  .image-scroll img {
+    width: 100%; /* Ensure images fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop to fill the space */
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+  }
+  
+</style>

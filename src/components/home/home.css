@@ -1,0 +1,69 @@
+/* From Uiverse.io by Tiagoadag */ 
+.service-card-design {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(163deg, #870be7 0%, #5e1054 100%);
+    border-radius:0 30px 0 30px;
+    transition: all .3s;
+   }
+   
+   .service-card-design-2{
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    border-radius:0 30px 0 30px;
+    transition: all .2s;
+   }
+   
+   .service-card-design-2:hover {
+    transform: scale(0.99);
+    border-radius:0 30px 0 30px;
+   }
+   
+   .service-card-design:hover {
+    /* transform: scale(1.02); */
+
+    box-shadow: 0px 0px 30px 1px rgba(163, 132, 249, 0.3);
+   }
+
+  .card-btn:hover{
+    color: #3700ff;
+  }
+  
+
+  /* whyus-title */
+.aboutus-content{
+  position: relative;
+}
+  .whyus-title::after{
+    position: absolute;
+    content: " ";
+    width: 100px;
+    height: 2px;
+    background-color: rgb(135, 11, 231);
+    transform-origin: left center;
+    top: 30px;
+    left: 14px;
+  }
+
+  @media (max-width:768px) {
+    .whyus-title::after{
+      top: 20px;
+      left: 14px;
+      width: 60px;
+    }
+    
+  }
+
+
+  .clients-logo{
+    position: relative;
+  }
+  .clients-logo::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    background: inherit;
+    filter: blur(20);
+    z-index: -1;
+  }

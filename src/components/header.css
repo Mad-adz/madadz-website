@@ -1,0 +1,119 @@
+/* footer dropdown */
+
+/* Dropdown container adjustments */
+.custom-dropdown .dropdown-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 520px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  /* Custom background color */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  /* Shadow effect */
+}
+
+/* Image adjustments */
+.dropdown-img img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+/* Right items adjustments */
+.dropdown-items {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Center content vertically */
+}
+
+/* Individual dropdown item */
+.dropdown-item-custom {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Title styles */
+.item-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 4px;
+  /* Spacing between title and description */
+}
+
+/* Description styles */
+.item-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Hover effect */
+.custom-dropdown .dropdown-item-custom:hover {
+  background-color: #eaeaea;
+  color: #fff !important;
+}
+
+/* Active item */
+.custom-dropdown .dropdown-item-custom.active {
+  background-color: #e2e2e2;
+  color: white;
+  border: none;
+}
+
+/* Adjusting dropdown positioning */
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+  left: -410px;
+  /* Adjust this value to position the dropdown correctly */
+  top: 100%;
+  /* Ensure it appears below the navbar */
+  background-color: transparent;
+  /* Ensure no background on menu */
+  border: none;
+  /* Remove border */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  /* Dropdown container for mobile view */
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 0 !important;
+    width: 100%;
+    /* Full width on mobile */
+    overflow: hidden;
+  }
+
+  /* Hide image on mobile */
+  .dropdown-img {
+    display: none;
+  }
+
+  /* Content layout for mobile */
+  .custom-dropdown .dropdown-content {
+    display: flex;
+    width: 100%;
+    padding: unset;
+  }
+
+  /* Adjust item padding on mobile */
+  .dropdown-items {
+    padding-left: unset !important;
+  }
+}
+
+/* Ensure proper spacing for small screens */
+.dropdown-item-custom {
+  padding: 10px;
+}
