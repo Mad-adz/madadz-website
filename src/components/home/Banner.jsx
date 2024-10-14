@@ -2,12 +2,14 @@ import { Container, Row, Col } from "react-bootstrap";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BsChatSquareQuote } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 
 const dynamicColorClass = "text-primary";
 
 function Banner() {
   return (
     <section className="home-container">
+  
       <Container className="vh-100 d-flex flex-column ">
         <Row className="flex-grow-1 align-items-center">
           <Col md={8} className="home-title pt-5">

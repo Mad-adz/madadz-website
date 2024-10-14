@@ -1,12 +1,15 @@
 import { Card, Container } from "react-bootstrap";
 
+
 function AboutUsSection() {
   return (
+   
     <section
       id="about-section"
       style={{ background: "#1a1a1a" }}
       className="py-5"
     >
+    
       <Container>
         <div>
           {/* <span className="sno">03</span> */}

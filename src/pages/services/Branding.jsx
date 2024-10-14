@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"; // Import Helmet for managing meta tags
 import DropdownBanner from "../../components/services/DropdownBanner";
 import DigitalMarket from "../../components/digitalmarketing/DigitalMarket";
 import DigitalCard from "../../components/digitalmarketing/DigitalCard";
@@ -9,6 +10,46 @@ import WhatsAppButton from "../../components/WhatsAppButton";
 const Branding = () => {
   return (
     <div>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>Branding | MADADZ - Elevate Your Brand with Digital Solutions</title>
+        <meta
+          name="description"
+          content="Transform your brand with MADADZ. We provide innovative digital solutions to enhance your brand presence and drive measurable results in the digital landscape."
+        />
+        <meta
+          name="keywords"
+          content="branding, digital solutions, digital marketing, MADADZ, enhance brand, innovative strategies, user experience"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="author" content="MADADZ" />
+
+        {/* Open Graph / Facebook Meta Tags */}
+        <meta property="og:title" content="Branding | MADADZ - Elevate Your Brand with Digital Solutions" />
+        <meta
+          property="og:description"
+          content="At MADADZ, we empower businesses with innovative digital solutions. Elevate your brand and achieve growth."
+        />
+        <meta property="og:image" content="https://madadz.co/images/branding.jpg" />
+        <meta property="og:url" content="https://madadz.co/branding" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Branding | MADADZ - Elevate Your Brand with Digital Solutions" />
+        <meta
+          name="twitter:description"
+          content="Transform your brand with MADADZ. Innovative digital solutions that drive measurable results."
+        />
+        <meta name="twitter:image" content="https://madadz.co/images/branding.jpg" />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://madadz.co/branding" />
+
+        {/* Favicons */}
+        <link rel="icon" type="image/svg+xml" href="/img/favm.jpeg" />
+      </Helmet>
+
       <DropdownBanner
         imageSrc="/img/dropdownsev/branding.png"
         heading="Elevating Your Brand with Impactful Digital Solutions"

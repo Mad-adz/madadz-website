@@ -4,12 +4,14 @@ import { cardItems } from "../../data";
 import { Link } from "react-router-dom";
 import "./home.css";
 
+
 function ServiceCard() {
   return (
     <div
     // style={{ background: "rgba(255, 255, 255, 0.1)" }}
     // className="pt-3 pb-3"
     >
+      
       <Container className="position-relative mt-5">
         <div>
           {/* <span className="sno">02</span> */}

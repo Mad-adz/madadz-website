@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./home.css";
 
+
 function OurClients({ clientLogoRef }) {
   const clients = [
     {
@@ -72,6 +73,7 @@ function OurClients({ clientLogoRef }) {
       style={{ background: "#eee" }}
       className="py-5"
     >
+     
       <Container className="mt-5">
         <div data-aos="fade-right">
           {/* <span className="sno">05</span> */}
