@@ -48,7 +48,7 @@ function TechStack({ clientLogoRef }) {
     },
     {
       logo: "/img/tech/dj.svg",
-      title: "Diango",
+      title: "Django",
     },
   ];
 
