@@ -68,7 +68,7 @@ const Footer = () => {
                     href="tel:+91 6380125351"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    +91 93616 24563
+                    +91 95668 63602
                   </a>
                 </p>
                 <p
@@ -80,23 +80,35 @@ const Footer = () => {
                     href="mailto:karthikkn877@gmail.com"
                     style={{ textDecoration: "none", color: "inherit" }}
                   >
-                    madadz@.co
+                    support@madadz.co
                   </a>
                 </p>
                 <div className="d-flex align-items-start justify-content-start mb-5 social-icons-container">
-                  <a href="https://www.youtube.com/@madadz-h6n" className="text-light social-icon">
+                  <a
+                    href="https://www.youtube.com/@madadz-h6n"
+                    className="text-light social-icon"
+                  >
                     <FaYoutube />
                   </a>
-                  <a href="https://www.instagram.com/madadz__/#" className="text-light social-icon">
+                  <a
+                    href="https://www.instagram.com/madadz__/#"
+                    className="text-light social-icon"
+                  >
                     <FaInstagram />
                   </a>
-                  <a href="https://www.linkedin.com/in/mad-adz-708b60331/" className="text-light social-icon">
+                  <a
+                    href="https://www.linkedin.com/in/mad-adz-708b60331/"
+                    className="text-light social-icon"
+                  >
                     <FaLinkedinIn />
                   </a>
                   <a href="#" className="text-light social-icon">
                     <FaFacebookF />
                   </a>
-                  <a href="https://x.com/madadzindia" className="text-light social-icon">
+                  <a
+                    href="https://x.com/madadzindia"
+                    className="text-light social-icon"
+                  >
                     <RiTwitterXFill />
                   </a>
                 </div>

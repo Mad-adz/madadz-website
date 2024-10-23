@@ -11,13 +11,13 @@ import {
 import { RiTwitterXFill } from "react-icons/ri";
 import Form from "react-bootstrap/Form";
 import { useForm, ValidationError } from "@formspree/react";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import CSS for toast notifications
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import CSS for toast notifications
 import "./contact.css";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mqakkkjk");
-  
+
   // State to manage form input values
   const [formValues, setFormValues] = useState({
     name: "",
@@ -82,32 +82,78 @@ const ContactForm = () => {
                 Connect With Us
               </h3>
               <div className="d-flex flex-column">
-                <p className="d-flex align-items-center" style={{ fontSize: "16px", color: "#ddd" }}>
-                  <RiWhatsappFill style={{ fontSize: "30px", marginRight: "10px", color: "#ddd" }} />
-                  +91 93616 24563
+                <p
+                  className="d-flex align-items-center"
+                  style={{ fontSize: "16px", color: "#ddd" }}
+                >
+                  <RiWhatsappFill
+                    style={{
+                      fontSize: "30px",
+                      marginRight: "10px",
+                      color: "#ddd",
+                    }}
+                  />
+                  +91 95668 63602
                 </p>
-                <p className="d-flex align-items-center" style={{ fontSize: "14px", color: "#ddd" }}>
-                  <MdEmail style={{ fontSize: "30px", marginRight: "10px", color: "#ddd" }} />
+                <p
+                  className="d-flex align-items-center"
+                  style={{ fontSize: "14px", color: "#ddd" }}
+                >
+                  <MdEmail
+                    style={{
+                      fontSize: "30px",
+                      marginRight: "10px",
+                      color: "#ddd",
+                    }}
+                  />
                   support@madads.co.in
                 </p>
                 <h3 style={{ color: "#fff", fontWeight: "900" }}>Meet Us</h3>
-                <p className="d-flex align-items-center" style={{ fontSize: "14px", color: "#ddd" }}>
+                <p
+                  className="d-flex align-items-center"
+                  style={{ fontSize: "14px", color: "#ddd" }}
+                >
                   347, Old Gst Road, East Tambaram, Chennai - 600059
                 </p>
                 <div className="d-flex align-items-center mt-3">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "white", marginRight: "10px" }}>
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "white", marginRight: "10px" }}
+                  >
                     <FaFacebookF style={{ fontSize: "25px" }} />
                   </a>
-                  <a href="https://x.com/madadzindia" target="_blank" rel="noopener noreferrer" style={{ color: "white", marginRight: "10px" }}>
+                  <a
+                    href="https://x.com/madadzindia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "white", marginRight: "10px" }}
+                  >
                     <RiTwitterXFill style={{ fontSize: "25px" }} />
                   </a>
-                  <a href="https://www.instagram.com/madadz__/#" target="_blank" rel="noopener noreferrer" style={{ color: "white", marginRight: "10px" }}>
+                  <a
+                    href="https://www.instagram.com/madadz__/#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "white", marginRight: "10px" }}
+                  >
                     <FaInstagram style={{ fontSize: "25px" }} />
                   </a>
-                  <a href="https://www.linkedin.com/in/mad-adz-708b60331/" target="_blank" rel="noopener noreferrer" style={{ color: "white", marginRight: "10px" }}>
+                  <a
+                    href="https://www.linkedin.com/in/mad-adz-708b60331/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "white", marginRight: "10px" }}
+                  >
                     <FaLinkedinIn style={{ fontSize: "25px" }} />
                   </a>
-                  <a href="https://www.youtube.com/@madadz-h6n" target="_blank" rel="noopener noreferrer" style={{ color: "white", marginRight: "10px" }}>
+                  <a
+                    href="https://www.youtube.com/@madadz-h6n"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "white", marginRight: "10px" }}
+                  >
                     <FaYoutube style={{ fontSize: "25px" }} />
                   </a>
                 </div>
@@ -127,12 +173,20 @@ const ContactForm = () => {
                 boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
               }}
             >
-              <h3 style={{ marginBottom: "20px", fontWeight: "bold", color: "#fff" }}>
+              <h3
+                style={{
+                  marginBottom: "20px",
+                  fontWeight: "bold",
+                  color: "#fff",
+                }}
+              >
                 Talk To Us
               </h3>
               <Form onSubmit={handleFormSubmit}>
                 <Form.Group controlId="formGroupName">
-                  <Form.Label style={{ color: "white", fontSize: "16px" }}>Name</Form.Label>
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    Name
+                  </Form.Label>
                   <Form.Control
                     className="mb-3 enquiry-input"
                     type="text"
@@ -151,7 +205,9 @@ const ContactForm = () => {
                 </Form.Group>
 
                 <Form.Group controlId="formGroupNumber">
-                  <Form.Label style={{ color: "white", fontSize: "16px" }} >Phone Number</Form.Label>
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    Phone Number
+                  </Form.Label>
                   <Form.Control
                     className="mb-3 enquiry-input"
                     type="tel"
@@ -170,7 +226,9 @@ const ContactForm = () => {
                 </Form.Group>
 
                 <Form.Group controlId="formGroupService">
-                  <Form.Label style={{ color: "white", fontSize: "16px" }}>Service Required</Form.Label>
+                  <Form.Label style={{ color: "white", fontSize: "16px" }}>
+                    Service Required
+                  </Form.Label>
                   <Form.Control
                     as="select"
                     name="service"
@@ -185,14 +243,33 @@ const ContactForm = () => {
                       color: "white",
                     }}
                   >
-                    <option value="" style={{color:"black"}}>Select a service</option>
-                    <option value="Web Development" style={{color:"black"}}>Web Development</option>
-                    <option value="App Development" style={{color:"black"}}>App Development</option>
-                    <option value="Digital Marketing" style={{color:"black"}}>Digital Marketing</option>
-                    <option value="SEO" style={{color:"black"}}>SEO (Search Engine Optimization)</option>
-                    <option value="Content Creation" style={{color:"black"}}>Content Creation</option>
-                    <option value="Designing" style={{color:"black"}}>Designing</option>
-                    <option value="UI/UX" style={{color:"black"}}>UI/UX</option>
+                    <option value="" style={{ color: "black" }}>
+                      Select a service
+                    </option>
+                    <option value="Web Development" style={{ color: "black" }}>
+                      Web Development
+                    </option>
+                    <option value="App Development" style={{ color: "black" }}>
+                      App Development
+                    </option>
+                    <option
+                      value="Digital Marketing"
+                      style={{ color: "black" }}
+                    >
+                      Digital Marketing
+                    </option>
+                    <option value="SEO" style={{ color: "black" }}>
+                      SEO (Search Engine Optimization)
+                    </option>
+                    <option value="Content Creation" style={{ color: "black" }}>
+                      Content Creation
+                    </option>
+                    <option value="Designing" style={{ color: "black" }}>
+                      Designing
+                    </option>
+                    <option value="UI/UX" style={{ color: "black" }}>
+                      UI/UX
+                    </option>
                   </Form.Control>
                 </Form.Group>
 
@@ -220,13 +297,25 @@ const ContactForm = () => {
                 </Form.Group>
 
                 <div className="d-flex justify-content-center align-items-center mt-3">
-                  <button type="submit" className="btn-common" disabled={state.submitting}>
+                  <button
+                    type="submit"
+                    className="btn-common"
+                    disabled={state.submitting}
+                  >
                     Send Message
                   </button>
                 </div>
 
-                <ValidationError prefix="Email" field="email" errors={state.errors} />
-                <ValidationError prefix="Message" field="message" errors={state.errors} />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
               </Form>
             </div>
           </Col>

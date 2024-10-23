@@ -45,7 +45,7 @@ const Home = () => {
           property="og:description"
           content="Expert web and app development, digital marketing services in Chennai. Boost your online presence with Madadz."
         />
-        <meta property="og:image" content="https://madadz.co/images/banner.jpg" />
+        <meta property="og:image" content="https://madadz.co/img/bg-2.jpg" />
         <meta property="og:url" content="https://madadz.co/" />
         <meta property="og:type" content="website" />
 

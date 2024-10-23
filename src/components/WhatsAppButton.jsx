@@ -3,10 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppButton = () => {
   const handleClick = () => {
-    window.open(
-      "https://wa.me/1234567890?text=Hello!%20I%20would%20like%20to%20inquire%20about%20your%20services.",
-      "_blank"
-    );
+    window.open("https://wa.link/n8ajs4", "_blank");
   };
 
   return (
