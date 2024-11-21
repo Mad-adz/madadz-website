@@ -98,6 +98,17 @@ function Header() {
                 >
                   About
                 </NavLink>
+                <NavLink
+                  to="/storyaura"
+                  className="nav-link"
+                  style={{ color: "white" }} // Ensure white text
+                  onClick={() => {
+                    handleClose(); // Close the menu
+                    window.scrollTo(0, 0); // Scroll to the top
+                  }}
+                >
+                  Story Aura
+                </NavLink>
                 <NavDropdown
                   title={
                     <span style={{ color: "white" }}>

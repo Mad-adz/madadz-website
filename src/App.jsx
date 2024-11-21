@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet"; // Import Helmet for managing meta tags
 import CommonLayout from "./layout/CommonLayout";
@@ -13,6 +12,7 @@ import Designing from "./pages/services/Designing";
 import ContentCreation from "./pages/services/ContentCreation";
 import Terms_Conditions from "./components/termsandcondition/Terms_Conditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import StoryAura from "./pages/StoryAura";
 
 export const App = () => {
   return (
@@ -35,6 +35,8 @@ export const App = () => {
           <Route element={<CommonLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/storyaura" element={<StoryAura />} />
+
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/policy" element={<PrivacyPolicy />} />

@@ -1,0 +1,7 @@
+.sa-banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/sa-bg.jpg');
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+}

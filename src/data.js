@@ -54,6 +54,16 @@ export const bannerData = [
   },
 ];
 
+export const saBanner = [
+  {
+    title: "Story Aura",
+    mainText: "Unleash Your Imaginations.!",
+    subText: "Share Your Tales.!",
+    description:
+      "Story Aura ( powered by MAD ADZ ) brings real-life stories from around the world to light. Submit your story easily through WhatsApp, Telegram, Instagram, Email or Google Forms. If your story is short-listed, we turn your story into engaging videos, blogs, and posts, sharing it with a global audience. Each month, one exceptional story wins a cash prize!",
+  },
+];
+
 export const ServiceBannerData = [
   {
     title: "Our Service",
@@ -111,10 +121,10 @@ export const cardData = [
   },
 ];
 
-
 export const blogContent = [
   {
     title: "Blog",
-    description:"Explore the latest trends, tips, and strategies in digital marketing, web development, graphic designing, and content creation to empower your business for success.",
-  }
-]
+    description:
+      "Explore the latest trends, tips, and strategies in digital marketing, web development, graphic designing, and content creation to empower your business for success.",
+  },
+];
