@@ -92,7 +92,7 @@ const ContactSA = () => {
                     }}
                   />
                   <Link
-                    to={"https://forms.gle/FwEnxFGB9xSxmWgXA"}
+                    to={"https://forms.gle/RinTcQGxWZjJFAEY9"}
                     target="_blank"
                     className="text-decoration-none text-white"
                   >
