@@ -198,7 +198,7 @@ const ContactSA = () => {
               </p>
               <div className="d-flex justify-content-center">
 
-              <Link to={""} variant="primary" className="home-btn mt-3 btn-common">
+              <Link to={"https://docs.google.com/forms/d/e/1FAIpQLSdCypET7zQhUasVk_AvjQDx4LFvf0s10jhOr1-MLRY8CrutYg/viewform?usp=sf_link"} variant="primary" className="home-btn mt-3 btn-common">
                 Cast Your Vote
               </Link>
               </div>
